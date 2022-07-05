@@ -4,7 +4,22 @@ from utils.conway_lib import Conway
 
 # =================================================================================
 
-size = width, height = 1000, 564
+size = WIDTH, HEIGHT = 1000, 564
+
+BUTTON = 64
+
+LABEL1_POS = 100
+LABEL2_POS = 750
+LABEL3_POS = 850
+
+BPLAY_POS = 400 + 4
+BPAUSE_POS = 400 + 68
+BCLEAR_POS = 400 + 132
+
+FIELD = HEIGHT - BUTTON
+BUTTON_POS = FIELD+15
+
+FONT_SIZE = 30
 
 BLACK = (0, 0, 0)
 WHITE = (255,255,255)
@@ -40,17 +55,17 @@ def main():
 
     play = pygame.image.load('images/play.png')
     playrect = play.get_rect()
-    playrect = playrect.move(404, 500)
+    playrect = playrect.move(BPLAY_POS, BUTTON_POS)
 
     pause = pygame.image.load('images/pause.png')
     pauserect = play.get_rect()
-    pauserect = pauserect.move(468, 500)
+    pauserect = pauserect.move(BPAUSE_POS,  BUTTON_POS)
 
     clear = pygame.image.load('images/clear.png')
     clearrect = play.get_rect()
-    clearrect = clearrect.move(532, 500)
+    clearrect = clearrect.move(BCLEAR_POS,  BUTTON_POS)
 
-    myfont = pygame.font.SysFont('Lucida Console', 30)
+    myfont = pygame.font.SysFont('Lucida Console', FONT_SIZE)
 
     running = False
 
@@ -63,7 +78,7 @@ def main():
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 x,y = pygame.mouse.get_pos()
-                if y <= 500:
+                if y <= FIELD:
                     mouse_click(world,x,y)
                 else:
                     if playrect.collidepoint(x, y):
@@ -86,13 +101,13 @@ def main():
         screen.blit(clear, clearrect)
 
         textsurface = myfont.render('Corriendo' if running else 'pausa', True, WHITE)
-        screen.blit(textsurface, (100, 515))
+        screen.blit(textsurface, (LABEL1_POS,  BUTTON_POS))
 
         textsurface = myfont.render(str(world.iterations), True, WHITE)
-        screen.blit(textsurface, (750, 515))
+        screen.blit(textsurface, (LABEL2_POS,  BUTTON_POS))
 
         textsurface = myfont.render(str(world.livecells), True, WHITE)
-        screen.blit(textsurface, (850, 515))
+        screen.blit(textsurface, (LABEL3_POS,  BUTTON_POS))
 
         pygame.display.flip()
 
