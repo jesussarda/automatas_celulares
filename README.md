@@ -18,7 +18,14 @@ Stephen Wolfram ha realizado numerosas investigaciones sobre el comportamiento c
 
 De esta manera, Wolfram clasificó el comportamiento cualitativo de los A.C. unidimensionales. De acuerdo con esto, un AC pertenece a una de las siguientes clases:
 
-Clase I. La evolución lleva a una configuración estable y homogénea, es decir, todas las células terminan por llegar al mismo valor.
-Clase II. La evolución lleva a un conjunto de estructuras simples que son estables o periódicas.
-Clase III. La evolución lleva a un patrón caótico.
-Clase IV. La evolución lleva a estructuras aisladas que muestran un comportamiento complejo (es decir, ni completamente caótico, ni completamente ordenado, sino en la línea entre uno y otro, este suele ser el tipo de comportamiento más interesante que un sistema dinámico puede presentar).
+- #### Clase I. 
+La evolución lleva a una configuración estable y homogénea, es decir, todas las células terminan por llegar al mismo valor.
+
+- #### Clase II. 
+La evolución lleva a un conjunto de estructuras simples que son estables o periódicas.
+
+- #### Clase III.
+La evolución lleva a un patrón caótico.
+
+- #### Clase IV. 
+La evolución lleva a estructuras aisladas que muestran un comportamiento complejo (es decir, ni completamente caótico, ni completamente ordenado, sino en la línea entre uno y otro, este suele ser el tipo de comportamiento más interesante que un sistema dinámico puede presentar).
